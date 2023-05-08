@@ -1,0 +1,17 @@
+rule-name: # descriptive name, naming convention is adjusted by the module
+  allow:  # `allow` or `deny`
+  - ports: ['443', '80'] # ports for a specific protocol, keep empty list `[]` for all ports
+    protocol: tcp # protocol, put `all` for any protocol
+  direction: INGRESS # EGRESS or INGRESS
+  disabled: false # `false` or `true`, FW rule is disabled when `true`, default value is `false`
+  priority: 1000 # rule priority value, default value is 1000
+  source_ranges: # list of source ranges, should be specified only for `INGRESS` rule
+  - 0.0.0.0/0
+  # destination_ranges: # list of destination ranges, should be specified only for `EGRESS` rule
+  # - 0.0.0.0/0
+  source_tags: ['some-tag'] # list of source tags,  should be specified only for `INGRESS` rule
+  # source_service_accounts: # list of source service accounts, should be specified only for `INGRESS` rule, can not be specified together with `source_tags` or `target_tags`
+  # - myapp@myproject-id.iam.gserviceaccount.com
+  # target_tags: ['some-tag'] # list of target tags
+  # target_service_accounts: # list of target service accounts, , can not be specified together with `source_tags` or `target_tags`
+  # - myapp@myproject-id.iam.gserviceaccount.com

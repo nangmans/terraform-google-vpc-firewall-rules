@@ -1,0 +1,35 @@
+/**
+ * Copyright 2021 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+output "egress_allow_rules" {
+  description = "Egress rules with allow blocks."
+  value       = module.example.egress_allow_rules
+}
+
+output "egress_deny_rules" {
+  description = "Egress rules with allow blocks."
+  value       = module.example.egress_deny_rules
+}
+
+output "ingress_allow_rules" {
+  description = "Ingress rules with allow blocks."
+  value       = module.example.ingress_allow_rules
+}
+
+output "ingress_deny_rules" {
+  description = "Ingress rules with deny blocks."
+  value       = module.example.ingress_deny_rules
+}
